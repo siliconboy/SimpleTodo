@@ -1,4 +1,4 @@
-package com.codepath.simpletodo;
+package com.codepath.simpletodo.ui.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -7,12 +7,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.codepath.simpletodo.R;
+import com.codepath.simpletodo.interfaces.EditTodoDialogListener;
+import com.codepath.simpletodo.interfaces.NoticeDialogListener;
+import com.codepath.simpletodo.models.Todo;
+import com.codepath.simpletodo.models.TodoAdapter;
+import com.codepath.simpletodo.ui.dialogs.EditTodoDialogFragment;
+import com.codepath.simpletodo.ui.dialogs.MyAlertDialogFragment;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements MyAlertDialogFragment.NoticeDialogListener, EditTodoDialogFragment.EditTodoDialogListener {
+public class MainActivity extends AppCompatActivity implements NoticeDialogListener, EditTodoDialogListener {
     ArrayList<Todo> items = new ArrayList<Todo>();
     TodoAdapter itemsAdapter;
     ListView lvItems;

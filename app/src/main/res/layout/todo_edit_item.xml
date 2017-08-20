@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.codepath.simpletodo.EditTodoDialogFragment">
+    tools:context="com.codepath.simpletodo.ui.dialogs.EditTodoDialogFragment">
 
     <EditText
         android:id="@+id/etName"
@@ -22,8 +22,9 @@
         android:layout_height="wrap_content"
         android:text="@string/Save"
         android:layout_below="@+id/prioritydropdown"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp" />
+        android:layout_toLeftOf="@+id/btnCancel"
+        android:layout_toStartOf="@+id/btnCancel"
+        android:layout_marginTop="14dp" />
 
     <Spinner
         android:id="@+id/prioritydropdown"
@@ -78,5 +79,15 @@
         android:layout_toLeftOf="@+id/prioritydropdown"
         android:layout_toStartOf="@+id/prioritydropdown"
         android:text="@string/priority" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnSave"
+        android:layout_alignBottom="@+id/btnSave"
+        android:layout_toEndOf="@+id/lbPriority"
+        android:layout_toRightOf="@+id/lbPriority"
+        android:text="@android:string/cancel" />
 
 </RelativeLayout>

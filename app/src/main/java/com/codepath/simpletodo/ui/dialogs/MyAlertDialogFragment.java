@@ -1,4 +1,4 @@
-package com.codepath.simpletodo;
+package com.codepath.simpletodo.ui.dialogs;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
+
+import com.codepath.simpletodo.ui.activities.MainActivity;
 
 /**
  * Created by yingbwan on 8/13/2017.
@@ -59,12 +61,6 @@ public class MyAlertDialogFragment extends DialogFragment {
         });
 
         return alertDialogBuilder.create();
-    }
-
-    public interface NoticeDialogListener {
-        public void onDialogPositiveClick(String result);
-
-        public void onDialogNegativeClick(String result);
     }
 
 }
