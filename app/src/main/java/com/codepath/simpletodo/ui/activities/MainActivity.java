@@ -3,6 +3,8 @@ package com.codepath.simpletodo.ui.activities;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -60,10 +62,6 @@ public class MainActivity extends AppCompatActivity implements NoticeDialogListe
         alertFragment.show(fm, "fragment_alert");
     }
 
-    public void onAddItem(android.view.View view) {
-        // popup new TODO dialog
-        showEditDialog(false);
-    }
 
     public void setupListViewListener() {
         //remove item
@@ -117,4 +115,24 @@ public class MainActivity extends AppCompatActivity implements NoticeDialogListe
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+     //   Drawable icon = menu.getItem(0).getIcon();
+       // icon.mutate();
+       // icon.setColorFilter(getResources().getColor(android.R.color.white, PorterDuff.Mode.SRC_IN));
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_add_item:
+                showEditDialog(false);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
