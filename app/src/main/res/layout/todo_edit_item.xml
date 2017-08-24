@@ -14,17 +14,20 @@
         android:inputType="textMultiLine"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Save"
-        android:layout_below="@+id/prioritydropdown"
-        android:layout_toLeftOf="@+id/btnCancel"
-        android:layout_toStartOf="@+id/btnCancel"
-        android:layout_marginTop="14dp" />
+        android:layout_alignBaseline="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnCancel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="62dp"
+        android:layout_marginEnd="62dp" />
 
     <Spinner
         android:id="@+id/prioritydropdown"
@@ -32,7 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/lbDate"
         android:layout_toEndOf="@+id/lbDate"
-        android:layout_below="@+id/lbDate" />
+        android:layout_below="@+id/lbDate"
+        />
 
     <TextView
         android:id="@+id/lbName"
@@ -44,7 +48,8 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/etName"
         android:layout_toStartOf="@+id/etName"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/lbDate"
@@ -56,7 +61,8 @@
         android:layout_below="@+id/etName"
         android:layout_alignParentLeft="true"
         android:layout_toStartOf="@+id/tvDate"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/tvDate"
@@ -66,7 +72,8 @@
         android:inputType="date"
         android:layout_below="@+id/etName"
         android:layout_toEndOf="@+id/lbName"
-        android:layout_toRightOf="@+id/lbName" />
+        android:layout_toRightOf="@+id/lbName"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/lbPriority"
@@ -78,16 +85,17 @@
         android:layout_below="@+id/lbDate"
         android:layout_toLeftOf="@+id/prioritydropdown"
         android:layout_toStartOf="@+id/prioritydropdown"
-        android:text="@string/priority" />
+        android:text="@string/priority"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnSave"
-        android:layout_alignBottom="@+id/btnSave"
-        android:layout_toEndOf="@+id/lbPriority"
-        android:layout_toRightOf="@+id/lbPriority"
-        android:text="@android:string/cancel" />
+        android:text="@android:string/cancel"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/prioritydropdown"
+        android:layout_toLeftOf="@+id/btnSave"
+        android:layout_toStartOf="@+id/btnSave" />
 
 </RelativeLayout>

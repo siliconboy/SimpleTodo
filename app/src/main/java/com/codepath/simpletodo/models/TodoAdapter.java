@@ -1,6 +1,7 @@
 package com.codepath.simpletodo.models;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,15 @@ public class TodoAdapter extends ArrayAdapter<Todo> {
         tvName.setText(todo.name);
 
         tvPriority.setText(todo.priority);
+        String[] priority_array = getContext().getResources().getStringArray(R.array.priority_array);
+        int txtColor = Color.GREEN;
+        if(todo.priority.equalsIgnoreCase(priority_array[0])){
+            txtColor = Color.RED;
+        }
+        if(todo.priority.equalsIgnoreCase(priority_array[1])) {
+            txtColor = Color.YELLOW;
+        }
+        tvPriority.setTextColor(txtColor);
 
         SimpleDateFormat ft = new SimpleDateFormat("MM/dd/yyyy");
         tvDate.setText(ft.format(todo.dueDate));
