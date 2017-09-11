@@ -25,6 +25,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+import static android.R.layout.simple_spinner_item;
 import static android.media.CamcorderProfile.get;
 
 /**
